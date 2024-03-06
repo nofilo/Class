@@ -1,0 +1,91 @@
+<!DOCTYPE html>     
+<html lang="en"> <head> 
+  <title>HTML Test</title> 
+  <meta charset="UTF-8"> 
+  <style type="text/css">   
+  /*带元素标签的是元素选择器
+     h3{text-align: left;}
+    p,h1,h2{text-align: center;} */
+
+    .tst1 {padding: 40px; background-color: rgb(199, 244, 151);}
+
+    /* 用#的是id选择器 ,记住id是独一无二的，和class不一样*/
+    #tst2{text-align: center;}
+    h2#tst2{color: rgb(99, 244, 195);}
+
+    /* 通用选择器，用*来表示，所有的字体都会变成红色
+    *{color: red;}  */
+
+    /* 父代和其后代中间用一个空格连接，即后代选择器 */
+    div strong {color: red;}
+
+    /* 伪类选择器，设置visit前和后颜色，或者鼠标悬浮在上面之前和之后的颜色。用一个冒号连接 */
+    a:link {color: green}
+    a:visited {color: red}
+    p:hover {color: red}
+
+    body{
+      margin:20px;
+      border: solid 1px black;
+    }
+    .container{
+      position: relative;
+      margin: 30px;
+      border: solid 1px orange;
+      padding: 10px;
+    }
+    /* 第一个盒子 */
+    .box1{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+    /* 第二个盒子 */
+    .box2{
+      width: 100px;
+      height: 100px;
+      background-color: #26cc21;
+      border: yellow solid;
+      /* 相对定位的偏移是相对于默认位置，而绝对位置的偏移是相对于父容器 */
+      position: absolute;
+      left: 50px;
+      top: 50px;
+    }
+    /* 第三个盒子 */
+    .box3{
+      width: 100px;
+      height: 100px;
+      background-color: #dd2121;
+    }
+    /* 第四个盒子 */
+    .box4{
+      width: 100px;
+      height: 100px;
+      background-color: #dc9ad0;
+    }
+  </style> 
+  </head> 
+  <body> 
+    <div><p>The red style <strong>has been applied to this element.</strong></p></div> 
+    <p>The red style <strong>has not been applied to this element.</strong></p>
+    
+    <div> 
+      <!-- class是类选择器，在css里面用.类名 来表示-->
+      <h1 class="tst1">The h1 text-align set to center.</h1> 
+      <h2 id="tst2">The h2 text-align set to center.</h2>
+      <h3 >The h3 text-align set to left.</h3> 
+      <p class="tst1">The p text-align set to center.</p>
+      
+      <a href="http://by.cuc.edu.cn/">Visit CUC Website</a> 
+      <p>The red style is applied when the mouse cursor hovers over this element.</p>
+    
+    </div> 
+    <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    </div>
+  </body> 
+    
+</html>      
